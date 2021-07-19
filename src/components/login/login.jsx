@@ -10,7 +10,6 @@ function Login() {
   const [password, setPassword] = useState('');
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [state, setState] = useState(true);
 
   useEffect(() => {
     if (window.innerWidth > 769) {
@@ -25,7 +24,6 @@ function Login() {
   const handleClick = () => {
     try {
       login({ password });
-      setState(!state);
     } catch (e) {
       // eslint-disable-next-line no-alert
       alert('Failed to login');
@@ -42,7 +40,7 @@ function Login() {
   return (
     <section id="login">
       <Container>
-        <Col md={12} sm={12} lg={12}>
+        <Col md={6} sm={3} lg={12}>
           <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={300} distance="30px">
             <h1 className="login-title">
               Please enter the authentication key
