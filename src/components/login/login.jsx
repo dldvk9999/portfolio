@@ -7,9 +7,10 @@ import PortfolioContext from '../../context/context';
 // eslint-disable-next-line react/prop-types
 function Login() {
   const { login } = useContext(PortfolioContext);
-
+  const [password, setPassword] = useState('');
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [state, setState] = useState(true);
 
   useEffect(() => {
     if (window.innerWidth > 769) {
@@ -21,15 +22,20 @@ function Login() {
     }
   }, []);
 
-  const [password, setPassword] = useState('');
-
   const handleClick = () => {
     try {
       login({ password });
+      setState(!state);
     } catch (e) {
       // eslint-disable-next-line no-alert
       alert('Failed to login');
       setPassword('');
+    }
+  };
+
+  const onKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleClick();
     }
   };
 
@@ -43,9 +49,11 @@ function Login() {
               <br />
               <input
                 className="login-input"
+                value={password}
                 onChange={({ target: { value } }) => setPassword(value)}
                 type="password"
-                placeholder="password"
+                placeholder="Auth Key"
+                onKeyPress={onKeyPress}
               />
               <button className="login-btn cta-btn--hero" onClick={handleClick}>
                 Login

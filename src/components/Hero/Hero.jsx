@@ -1,3 +1,4 @@
+/* eslint-disable react/button-has-type */
 import React, { useContext, useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
@@ -21,6 +22,10 @@ const Header = () => {
     }
   }, []);
 
+  const handleClick = () => {
+    window.location.reload();
+  };
+
   return (
     <section id="hero" className="jumbotron">
       <Container>
@@ -38,6 +43,16 @@ const Header = () => {
               <Link to="about" smooth duration={1000}>
                 {cta || 'Know more'}
               </Link>
+            </span>
+            <span>
+              <button
+                className="logout-btn cta-btn--hero"
+                onClick={handleClick}
+                smooth
+                duration={1000}
+              >
+                Logout
+              </button>
             </span>
           </p>
         </Fade>
