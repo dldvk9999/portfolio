@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { signIn } from '../context/auth';
 import Hero from './Hero/Hero';
 import About from './About/About';
 import Projects from './Projects/Projects';
 import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
+import Login from './login/login';
 
 import { PortfolioProvider } from '../context/context';
 
@@ -15,6 +17,9 @@ function App() {
   const [projects, setProjects] = useState([]);
   const [contact, setContact] = useState({});
   const [footer, setFooter] = useState({});
+  const [user, setUser] = useState(null);
+  const authenticated = user != null;
+  const login = ({ password }) => setUser(signIn({ password }));
 
   useEffect(() => {
     setHero({ ...heroData });
@@ -24,6 +29,13 @@ function App() {
     setFooter({ ...footerData });
   }, []);
 
+  if (!authenticated) {
+    return (
+      <PortfolioProvider value={{ login }}>
+        <Login />
+      </PortfolioProvider>
+    );
+  }
   return (
     <PortfolioProvider value={{ hero, about, projects, contact, footer }}>
       <Hero />
