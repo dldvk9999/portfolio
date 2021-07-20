@@ -59,6 +59,17 @@
           text-align: center;
         }
 
+        &-grid {
+          text-align: left;
+          display: grid;
+          grid-template-columns: 8rem auto;
+          grid-template-rows: auto auto auto;
+          
+          &-item {
+            margin-bottom: 0;
+          }
+        }
+
         &--important {
           background: darken($secondary-color, 1%);
           display: inline-block;

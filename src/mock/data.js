@@ -18,9 +18,15 @@ export const heroData = {
 // ABOUT DATA
 export const aboutData = {
   img: 'profile.jpg',
-  paragraphOne: '',
-  paragraphTwo: '',
-  paragraphThree: '',
+  name: '이름 : 박종근',
+  birth: '생년월일 : 1998년 1월 5일',
+  degree: '최종학력 : 수원대학교 정보보호학과 졸업 예정',
+  career: '경력사항 : ',
+  career1: '18.05.21~20.01.15 육군본부 정보보호병',
+  career2: '21.02.15~ 웹프로그래밍 외주업체 PM직',
+  career3: '21.07.02 K-Shield Jr. 6기 수료',
+  tel: '연락처 : 010-7184-6533',
+  email: '이메일 : dldvk9999@naver.com',
   resume: 'https://www.resumemaker.online/es.php', // if no resume, the button will not show up
 };
 

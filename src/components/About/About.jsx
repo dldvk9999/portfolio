@@ -7,7 +7,7 @@ import PortfolioContext from '../../context/context';
 
 const About = () => {
   const { about } = useContext(PortfolioContext);
-  const { img, paragraphOne, paragraphTwo, paragraphThree, resume } = about;
+  const { img, name, birth, degree, career, career1, career2, career3, tel, email, resume } = about;
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -37,17 +37,25 @@ const About = () => {
           <Col md={6} sm={12}>
             <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
               <div className="about-wrapper__info">
-                <p className="about-wrapper__info-text">
-                  {paragraphOne ||
-                    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum consequatur blanditiis inventore debitis fuga numquam voluptate architecto itaque molestiae.'}
+                <p className="about-wrapper__info-text">{name || 'The data does not exist.'}</p>
+                <p className="about-wrapper__info-text">{birth || 'The data does not exist.'}</p>
+                <p className="about-wrapper__info-text">{degree || 'The data does not exist.'}</p>
+                <p className="about-wrapper__info-text-grid">
+                  <p className="about-wrapper__info-text-grid-item">{career}</p>
+                  <p className="about-wrapper__info-text-grid-item">
+                    {career1 || 'The data does not exist.'}
+                  </p>
+                  <p className="about-wrapper__info-text-grid-item" />
+                  <p className="about-wrapper__info-text-grid-item">
+                    {career2 || 'The data does not exist.'}
+                  </p>
+                  <p className="about-wrapper__info-text-grid-item" />
+                  <p className="about-wrapper__info-text-grid-item">
+                    {career3 || 'The data does not exist.'}
+                  </p>
                 </p>
-                <p className="about-wrapper__info-text">
-                  {paragraphTwo ||
-                    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum consequatur blanditiis inventore debitis fuga numquam voluptate architecto itaque molestiae.'}
-                </p>
-                <p className="about-wrapper__info-text">
-                  {paragraphThree || 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'}
-                </p>
+                <p className="about-wrapper__info-text">{tel || 'The data does not exist.'}</p>
+                <p className="about-wrapper__info-text">{email || 'The data does not exist.'}</p>
                 {resume && (
                   <span className="d-flex mt-3">
                     <a
