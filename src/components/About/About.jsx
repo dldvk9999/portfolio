@@ -7,7 +7,22 @@ import PortfolioContext from '../../context/context';
 
 const About = () => {
   const { about } = useContext(PortfolioContext);
-  const { img, name, birth, degree, career, career1, career2, career3, tel, email, resume } = about;
+  const {
+    img,
+    name,
+    birth,
+    degree,
+    career,
+    career1,
+    career2,
+    career3,
+    career4,
+    career5,
+    career6,
+    tel,
+    email,
+    resume,
+  } = about;
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -52,6 +67,18 @@ const About = () => {
                   <p className="about-wrapper__info-text-grid-item" />
                   <p className="about-wrapper__info-text-grid-item">
                     {career3 || 'The data does not exist.'}
+                  </p>
+                  <p className="about-wrapper__info-text-grid-item" />
+                  <p className="about-wrapper__info-text-grid-item">
+                    {career4 || 'The data does not exist.'}
+                  </p>
+                  <p className="about-wrapper__info-text-grid-item" />
+                  <p className="about-wrapper__info-text-grid-item">
+                    {career5 || 'The data does not exist.'}
+                  </p>
+                  <p className="about-wrapper__info-text-grid-item" />
+                  <p className="about-wrapper__info-text-grid-item">
+                    {career6 || 'The data does not exist.'}
                   </p>
                 </p>
                 <p className="about-wrapper__info-text">{tel || 'The data does not exist.'}</p>
