@@ -137,7 +137,15 @@ export const certificatesData = [
 export const projectsData = [
   {
     id: nanoid(),
-    img: 'project.jpg',
+    img: 'hanium/slide_5.png',
+    img1: 'hanium/slide_1.PNG',
+    img2: 'hanium/slide_2.PNG',
+    img3: 'hanium/slide_3.PNG',
+    img4: 'hanium/slide_4.PNG',
+    img5: 'hanium/slide_5.png',
+    img6: 'hanium/slide_6.jpg',
+    img7: 'hanium/slide_7.jpg',
+    img8: 'hanium/slide_8.gif',
     title: '2020 한이음 프로젝트',
     info: 'Device Driver를 활용한 랩톱 보안 소프트웨어',
     info2:
@@ -149,7 +157,11 @@ export const projectsData = [
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
+    img: 'peacekeeper/slide_4.png',
+    img1: 'peacekeeper/slide_1.jpg',
+    img2: 'peacekeeper/slide_2.png',
+    img3: 'peacekeeper/slide_3.png',
+    img4: 'peacekeeper/slide_4.png',
     title: '개인 프로젝트',
     info: 'Peace Keeper',
     info2:
@@ -161,7 +173,12 @@ export const projectsData = [
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
+    img: 'kshield/slide_1.png',
+    img1: 'kshield/slide_1.png',
+    img2: 'kshield/slide_2.png',
+    img3: 'kshield/slide_3.png',
+    img4: 'kshield/slide_4.png',
+    img5: 'kshield/slide_5.png',
     title: 'K-Shield Jr. 프로젝트',
     info: 'Post Corona에 맞는 기업 홈페이지 취약점 분석 및 솔루션 제시',
     info2:
@@ -173,7 +190,8 @@ export const projectsData = [
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
+    img: 'site/slide_1.PNG',
+    img1: 'site/slide_1.PNG',
     title: 'Portfolio Site',
     info: 'Gatsby와 React를 사용한 포트폴리오 사이트',
     info2: '지금 현재 보고계신 이 사이트에 대한 정보입니다.',

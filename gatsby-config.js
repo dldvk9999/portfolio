@@ -31,5 +31,12 @@ module.exports = {
         icon: 'src/images/favicon.png',
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `backgrounds`,
+        path: `${__dirname}/src/images/hanium`, // wherever background images are stored
+      },
+    },
   ],
 };

@@ -4,7 +4,7 @@ import Tilt from 'react-tilt';
 import { Container, Row, Col } from 'react-bootstrap';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
-import ProjectImg from '../Image/ProjectImg';
+import ImageSlider from '../Image/ImageSlider';
 
 const Projects = () => {
   const { projects } = useContext(PortfolioContext);
@@ -63,7 +63,7 @@ const Projects = () => {
                           className="cta-btn text-color-main"
                           href={repo}
                         >
-                          Source Code
+                          Repo
                         </a>
                       )}
                     </div>
@@ -79,8 +79,9 @@ const Projects = () => {
                   >
                     <div className="project-wrapper__image">
                       <a
-                        href={url || '#!'}
-                        target="_blank"
+                        // eslint-disable-next-line no-script-url
+                        href={url || 'javascript:void(0);'}
+                        target={url}
                         aria-label="Project Link"
                         rel="noopener noreferrer"
                       >
@@ -98,7 +99,7 @@ const Projects = () => {
                           }}
                         >
                           <div data-tilt className="thumbnail rounded">
-                            <ProjectImg alt={title} filename={img} />
+                            <ImageSlider alt={title} filename={img} />
                           </div>
                         </Tilt>
                       </a>
