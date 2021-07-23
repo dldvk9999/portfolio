@@ -12,7 +12,6 @@ const About = () => {
     name,
     birth,
     degree,
-    career,
     career1,
     career2,
     career3,
@@ -21,11 +20,21 @@ const About = () => {
     career6,
     tel,
     email,
+    blog,
+    tistory,
     resume,
   } = about;
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [titleName] = useState('이름 : ');
+  const [titleBirth] = useState('생년월일 : ');
+  const [titleDegree] = useState('최종학력 : ');
+  const [titleCareer] = useState('경력사항 : ');
+  const [titleTel] = useState('Tel : ');
+  const [titleEmail] = useState('Email : ');
+  const [titleBlog] = useState('블로그 : ');
+  const [titleTistory] = useState('티스토리 : ');
 
   useEffect(() => {
     if (window.innerWidth > 769) {
@@ -52,11 +61,20 @@ const About = () => {
           <Col md={6} sm={12}>
             <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
               <div className="about-wrapper__info">
-                <p className="about-wrapper__info-text">{name || 'The data does not exist.'}</p>
-                <p className="about-wrapper__info-text">{birth || 'The data does not exist.'}</p>
-                <p className="about-wrapper__info-text">{degree || 'The data does not exist.'}</p>
+                <p className="about-wrapper__info-text">
+                  {titleName}
+                  {name || 'The data does not exist.'}
+                </p>
+                <p className="about-wrapper__info-text">
+                  {titleBirth}
+                  {birth || 'The data does not exist.'}
+                </p>
+                <p className="about-wrapper__info-text">
+                  {titleDegree}
+                  {degree || 'The data does not exist.'}
+                </p>
                 <p className="about-wrapper__info-text-grid">
-                  <p className="about-wrapper__info-text-grid-item">{career}</p>
+                  <p className="about-wrapper__info-text-grid-item">{titleCareer}</p>
                   <p className="about-wrapper__info-text-grid-item">
                     {career1 || 'The data does not exist.'}
                   </p>
@@ -81,8 +99,42 @@ const About = () => {
                     {career6 || 'The data does not exist.'}
                   </p>
                 </p>
-                <p className="about-wrapper__info-text">{tel || 'The data does not exist.'}</p>
-                <p className="about-wrapper__info-text">{email || 'The data does not exist.'}</p>
+                <p className="about-wrapper__info-text">
+                  {titleTel}
+                  {tel || 'The data does not exist.'}
+                </p>
+                <p className="about-wrapper__info-text">
+                  {titleEmail}
+                  {email || 'The data does not exist.'}
+                </p>
+                {blog && (
+                  <p className="about-wrapper__info-text">
+                    {titleBlog}
+                    <a
+                      href={blog}
+                      target={blog}
+                      aria-label="Project Link"
+                      rel="noopener noreferrer"
+                      className="about-wrapper__info-text--important"
+                    >
+                      {blog || 'The data does not exist.'}
+                    </a>
+                  </p>
+                )}
+                {tistory && (
+                  <p className="about-wrapper__info-text">
+                    {titleTistory}
+                    <a
+                      href={tistory}
+                      target={tistory}
+                      aria-label="Project Link"
+                      rel="noopener noreferrer"
+                      className="about-wrapper__info-text--important"
+                    >
+                      {tistory || 'The data does not exist.'}
+                    </a>
+                  </p>
+                )}
                 {resume && (
                   <span className="d-flex mt-3">
                     <a
