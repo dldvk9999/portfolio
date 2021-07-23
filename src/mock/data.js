@@ -60,8 +60,9 @@ export const certificatesData = [
       '이 멘토링을 통해 "디바이스 드라이버를 활용한 랩톱 보안 소프트웨어"라는 프로젝트를 수행하였고, 아쉽게도 드라이버 개발에서 완료를 짓지 못하였지만 PC 프로그램 및 스마트폰 어플 개발은 모두 완료하여 개인적으로 개발에 있어 많이 성장한 시간이었다고 생각합니다.',
     info4:
       '또한 처음으로 팀프로젝트로 진행하여 개발에 있어 팀으로 진행할때 어떤 식으로 진행해야할지, 개발 계획서 작성법 등 멘토님에게서 많은 가르침도 받았던 시간이였습니다.',
-    info5: '해당 프로젝트의 소스코드는 하단에 PROJECT 섹션에 Github URL로 첨부해놓았습니다.',
-    url: '',
+    info5:
+      '해당 프로젝트의 소스코드는 하단에 PROJECT 섹션에 Github URL로 첨부해놓았고 오른쪽 수행확인서 이미지를 클릭하시면 당시 개발 설계서를 보실 수 있습니다.',
+    url: 'https://drive.google.com/file/d/19mVKEG9szn1xRMi0bFlaywdtZRDJexfl/view?usp=sharing',
   },
   {
     id: nanoid(),
@@ -115,7 +116,7 @@ export const certificatesData = [
     info3:
       '본 과정을 통해 정보보안 기초, 기업보안업무 기초, 관리 보안 운영, 기술 보안 운영, 정보시스템 취약점 진단, 모의해킹을 배웠습니다.',
     info4:
-      '또한 과정 마지막에 팀프로젝트로 포스트 코로나에 맞는 기업 취약점 진단 및 발표도 진행하여 훈련 사이트에 직접 모의해킹을 한 후 취약점 점검 및 보고서 작성을 작성해보기도 하였습니다.',
+      '또한 과정 마지막에 팀프로젝트로 포스트 코로나에 맞는 기업 취약점 진단 및 발표도 진행하여 훈련 사이트에 직접 모의해킹을 한 후 취약점 점검 및 보고서 작성을 작성해보기도 하였습니다. (팀프로젝트 내용은 하단 PROJECT 섹션에 첨부하였습니다.)',
     info5:
       '정보보안 컨설턴트의 관점에서 해당 기업을 어떤 식으로 진단할지, 내놓아야할 솔루션이 어떤 것이 있을지 등을 깊이있게 배웠던 시간이였고 실무에 있어 도움이 되는 좋은 경험을 했다고 생각합니다.',
     url: '',
@@ -127,29 +128,47 @@ export const projectsData = [
   {
     id: nanoid(),
     img: 'project.jpg',
-    title: '',
-    info: '',
-    info2: '',
+    title: '2020 한이음 프로젝트',
+    info: 'Device Driver를 활용한 랩톱 보안 소프트웨어',
+    info2:
+      '본 프로젝트는 카페와 같은 공공장소에서 사용하는 랩톱(노트북)에 대해 사용자가 자리를 비울 경우 드라이버단에서 자동으로 잠궈지게 되고, 이를 얼굴인식을 이용하여 잠금해제하는 프로젝트 입니다.',
+    info3:
+      '코로나 시국에 사람들은 마스크를 착용하고 있기 때문에 얼굴인식을 대체할 음성인식이나 블루투스를 이용해 스마트폰과 연결하여 원격으로 잠금 및 해제하는 기능을 구현하였습니다.',
     url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    repo: '', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
     img: 'project.jpg',
-    title: '',
-    info: '',
-    info2: '',
+    title: '개인 프로젝트',
+    info: 'Peace Keeper',
+    info2:
+      '본 프로젝트는 유명 유튜버, BJ, 연예인 등을 비롯한 각종 인플루언서들을 위해 딥러닝을 이용한 악성 문자열 필터링 프로젝트입니다.',
+    info3:
+      'PC, Android, IOS 모든 버전으로 개발하였으며 기사의 댓글은 물론 실시간 댓글의 닉네임 및 채팅까지 바로바로 필터링할 수 있습니다.',
     url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    repo: '', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
     img: 'project.jpg',
-    title: '',
-    info: '',
-    info2: '',
+    title: 'K-Shield Jr. 프로젝트',
+    info: 'Post Corona에 맞는 기업 홈페이지 취약점 분석 및 솔루션 제시',
+    info2:
+      '본 프로젝트는 포스트 코로나에 맞춰 중소기업의 사이트를 취약점 분석하고 모의해킹하여 그에 맞는 해결방안 및 솔루션을 제시하는 프로젝트입니다.',
+    info3:
+      '실제 중소기업 사이트가 아닌 임의로 개발된 모의 사이트에서 진행하였으며 팀 단위로 진행하였습니다.',
     url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    repo: '', // if no repo, the button will not show up
+  },
+  {
+    id: nanoid(),
+    img: 'project.jpg',
+    title: 'Portfolio Site',
+    info: 'Gatsby와 React를 사용한 포트폴리오 사이트',
+    info2: '지금 현재 보고계신 이 사이트에 대한 정보입니다.',
+    url: '',
+    repo: '', // if no repo, the button will not show up
   },
 ];
 
