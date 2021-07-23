@@ -26,7 +26,8 @@ const Footer = () => {
               return (
                 <a
                   key={id}
-                  href={url || 'https://github.com/cobidev/gatsby-simplefolio'}
+                  // eslint-disable-next-line no-script-url
+                  href={url || 'javascript:void(0);'}
                   rel="noopener noreferrer"
                   target="_blank"
                   aria-label={name}
@@ -41,6 +42,10 @@ const Footer = () => {
           © {new Date().getFullYear()} - Template developed by{' '}
           <a href="https://github.com/cobidev" target="_blank" rel="noopener noreferrer">
             Jacobo Martínez
+          </a>{' '}
+          and modified by{' '}
+          <a href="https://github.com/dldvk9999" target="_blank" rel="noopener noreferrer">
+            dldvk9999
           </a>
         </p>
 

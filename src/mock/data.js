@@ -1,5 +1,12 @@
 import { nanoid } from 'nanoid';
 
+// LOGIN DATA
+export const loginData = {
+  title: '인증키를 입력해주세요.',
+  placeholder: 'Auth Key',
+  auth: '인증',
+};
+
 // HEAD DATA
 export const headData = {
   title: "JongGeun's Portfolio", // e.g: 'Name | Developer'
@@ -9,10 +16,12 @@ export const headData = {
 
 // HERO DATA
 export const heroData = {
-  title: '',
-  name: 'JongGeun Park',
-  subtitle: '',
-  cta: '',
+  title: '안녕하십니까, 제 이름은 ',
+  name: '박종근',
+  title2: ' 입니다.',
+  subtitle: '이제 제 소개를 시작하겠습니다.',
+  cta: '시작하기',
+  deauth: '인증해제',
 };
 
 // ABOUT DATA
@@ -146,7 +155,7 @@ export const projectsData = [
     info2:
       '본 프로젝트는 유명 유튜버, BJ, 연예인 등을 비롯한 각종 인플루언서들을 위해 딥러닝을 이용한 악성 문자열 필터링 프로젝트입니다.',
     info3:
-      'PC, Android, IOS 모든 버전으로 개발하였으며 기사의 댓글은 물론 실시간 댓글의 닉네임 및 채팅까지 바로바로 필터링할 수 있습니다.',
+      'PC, Android, IOS 모든 버전으로 개발하였으며 기사의 댓글은 물론 실시간 채팅의 닉네임 및 내용까지 바로바로 필터링할 수 있습니다.',
     url: '',
     repo: '', // if no repo, the button will not show up
   },
@@ -168,6 +177,8 @@ export const projectsData = [
     title: 'Portfolio Site',
     info: 'Gatsby와 React를 사용한 포트폴리오 사이트',
     info2: '지금 현재 보고계신 이 사이트에 대한 정보입니다.',
+    info3:
+      '이 외에도 C언어나 Python 등을 이용한 다른 프로그램들을 보고 싶으시면 아래 CONTACT 섹션 하단에 Github 이모티콘을 클릭해주시면 감사하겠습니다.',
     url: '',
     repo: '', // if no repo, the button will not show up
   },
@@ -175,9 +186,9 @@ export const projectsData = [
 
 // CONTACT DATA
 export const contactData = {
-  cta: '',
-  btn: '',
-  email: '',
+  cta: '본 포트폴리오를 방문해주셔서 감사합니다!',
+  btn: '이메일 보내기',
+  email: 'dldvk9999@naver.com',
 };
 
 // FOOTER DATA
@@ -185,28 +196,13 @@ export const footerData = {
   networks: [
     {
       id: nanoid(),
-      name: 'twitter',
-      url: '',
-    },
-    {
-      id: nanoid(),
-      name: 'codepen',
-      url: '',
-    },
-    {
-      id: nanoid(),
-      name: 'linkedin',
-      url: '',
-    },
-    {
-      id: nanoid(),
       name: 'github',
-      url: '',
+      url: 'https://github.com/dldvk9999',
     },
   ],
 };
 
 // Github start/fork buttons
 export const githubButtons = {
-  isEnabled: true, // set to false to disable the GitHub stars/fork buttons
+  isEnabled: false, // set to false to disable the GitHub stars/fork buttons
 };

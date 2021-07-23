@@ -11,6 +11,7 @@ import Login from './login/login';
 import { PortfolioProvider } from '../context/context';
 
 import {
+  loginData,
   heroData,
   aboutData,
   certificatesData,
@@ -20,6 +21,7 @@ import {
 } from '../mock/data';
 
 function App() {
+  const [login, setLogin] = useState({});
   const [hero, setHero] = useState({});
   const [about, setAbout] = useState({});
   const [certificates, setCertificates] = useState([]);
@@ -28,9 +30,10 @@ function App() {
   const [footer, setFooter] = useState({});
   const [user, setUser] = useState(null);
   const authenticated = user != null;
-  const login = ({ password }) => setUser(signIn({ password }));
+  const loginAuth = ({ password }) => setUser(signIn({ password }));
 
   useEffect(() => {
+    setLogin({ ...loginData });
     setHero({ ...heroData });
     setAbout({ ...aboutData });
     setCertificates([...certificatesData]);
@@ -41,7 +44,7 @@ function App() {
 
   if (!authenticated) {
     return (
-      <PortfolioProvider value={{ login }}>
+      <PortfolioProvider value={{ login, loginAuth }}>
         <Login />
       </PortfolioProvider>
     );

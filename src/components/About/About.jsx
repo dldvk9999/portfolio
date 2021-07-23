@@ -115,7 +115,7 @@ const About = () => {
                       target={blog}
                       aria-label="Project Link"
                       rel="noopener noreferrer"
-                      className="about-wrapper__info-text--important"
+                      className="about-wrapper__info-text--important-link"
                     >
                       {blog || 'The data does not exist.'}
                     </a>
@@ -129,7 +129,7 @@ const About = () => {
                       target={tistory}
                       aria-label="Project Link"
                       rel="noopener noreferrer"
-                      className="about-wrapper__info-text--important"
+                      className="about-wrapper__info-text--important-link"
                     >
                       {tistory || 'The data does not exist.'}
                     </a>

@@ -6,7 +6,9 @@ import PortfolioContext from '../../context/context';
 
 // eslint-disable-next-line react/prop-types
 function Login() {
-  const { login } = useContext(PortfolioContext);
+  const { login, loginAuth } = useContext(PortfolioContext);
+  const { title, placeholder, auth } = login;
+
   const [password, setPassword] = useState('');
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -23,7 +25,7 @@ function Login() {
 
   const handleClick = () => {
     try {
-      login({ password });
+      loginAuth({ password });
     } catch (e) {
       // eslint-disable-next-line no-alert
       alert('Failed to login');
@@ -43,18 +45,18 @@ function Login() {
         <Col md={6} sm={3} lg={12}>
           <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={300} distance="30px">
             <h1 className="login-title">
-              Please enter the authentication key
+              {title || 'Please enter the authentication key'}
               <br />
               <input
                 className="login-input"
                 value={password}
                 onChange={({ target: { value } }) => setPassword(value)}
                 type="password"
-                placeholder="Auth Key"
+                placeholder={placeholder || 'Auth Key'}
                 onKeyPress={onKeyPress}
               />
               <button className="login-btn cta-btn--hero" onClick={handleClick}>
-                Login
+                {auth}
               </button>
             </h1>
           </Fade>

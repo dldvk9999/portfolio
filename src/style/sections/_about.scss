@@ -86,6 +86,16 @@
             background: transparent;
             font-style: normal;
           }
+
+          &-link {
+            display: inline-block;
+            font-style: italic;
+            padding: 0 0.3rem;
+            line-height: 1.6;
+            color: ivory;
+            text-align: left;
+            text-decoration: underline;
+          }
         }
       }
     }
