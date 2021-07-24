@@ -61,13 +61,17 @@ const About = () => {
           <Col md={6} sm={12}>
             <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
               <div className="about-wrapper__info">
-                <p className="about-wrapper__info-text">
-                  {titleName}
-                  {name || 'The data does not exist.'}
+                <p className="about-wrapper__info-text-grid">
+                  <p className="about-wrapper__info-text-grid-item">{titleName}</p>
+                  <p className="about-wrapper__info-text-grid-item">
+                    {name || 'The data does not exist.'}
+                  </p>
                 </p>
-                <p className="about-wrapper__info-text">
-                  {titleBirth}
-                  {birth || 'The data does not exist.'}
+                <p className="about-wrapper__info-text-grid">
+                  <p className="about-wrapper__info-text-grid-item">{titleBirth}</p>
+                  <p className="about-wrapper__info-text-grid-item">
+                    {birth || 'The data does not exist.'}
+                  </p>
                 </p>
                 <p className="about-wrapper__info-text-grid">
                   <p className="about-wrapper__info-text-grid-item">{titleDegree}</p>
@@ -101,9 +105,11 @@ const About = () => {
                     {career6 || 'The data does not exist.'}
                   </p>
                 </p>
-                <p className="about-wrapper__info-text">
-                  {titleTel}
-                  {tel || 'The data does not exist.'}
+                <p className="about-wrapper__info-text-grid">
+                  <p className="about-wrapper__info-text-grid-item">{titleTel}</p>
+                  <p className="about-wrapper__info-text-grid-item">
+                    {tel || 'The data does not exist.'}
+                  </p>
                 </p>
                 <p className="about-wrapper__info-text-grid">
                   <p className="about-wrapper__info-text-grid-item">{titleEmail}</p>
