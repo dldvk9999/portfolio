@@ -30,7 +30,7 @@
     }
     @include respond(phone) {
       font-size: 3rem;
-      line-height: 1;
+      line-height: 1.2;
     }
     @include respond(phone-xs) {
       font-size: 2.3rem;

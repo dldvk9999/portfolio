@@ -42,7 +42,7 @@ function Login() {
   return (
     <section id="login">
       <Container>
-        <Col md={6} sm={3} lg={12}>
+        <Col md={12} sm={3} lg={12}>
           <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={300} distance="30px">
             <h1 className="login-title">
               {title || 'Please enter the authentication key'}
@@ -54,6 +54,7 @@ function Login() {
                 type="password"
                 placeholder={placeholder || 'Auth Key'}
                 onKeyPress={onKeyPress}
+                style={{ width: '100%' }}
               />
               <button className="login-btn cta-btn--hero" onClick={handleClick}>
                 {auth}

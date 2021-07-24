@@ -69,9 +69,11 @@ const About = () => {
                   {titleBirth}
                   {birth || 'The data does not exist.'}
                 </p>
-                <p className="about-wrapper__info-text">
-                  {titleDegree}
-                  {degree || 'The data does not exist.'}
+                <p className="about-wrapper__info-text-grid">
+                  <p className="about-wrapper__info-text-grid-item">{titleDegree}</p>
+                  <p className="about-wrapper__info-text-grid-item">
+                    {degree || 'The data does not exist.'}
+                  </p>
                 </p>
                 <p className="about-wrapper__info-text-grid">
                   <p className="about-wrapper__info-text-grid-item">{titleCareer}</p>
@@ -103,12 +105,14 @@ const About = () => {
                   {titleTel}
                   {tel || 'The data does not exist.'}
                 </p>
-                <p className="about-wrapper__info-text">
-                  {titleEmail}
-                  {email || 'The data does not exist.'}
+                <p className="about-wrapper__info-text-grid">
+                  <p className="about-wrapper__info-text-grid-item">{titleEmail}</p>
+                  <p className="about-wrapper__info-text-grid-item">
+                    {email || 'The data does not exist.'}
+                  </p>
                 </p>
                 {blog && (
-                  <p className="about-wrapper__info-text">
+                  <p className="about-wrapper__info-text-grid">
                     {titleBlog}
                     <a
                       href={blog}
@@ -117,12 +121,14 @@ const About = () => {
                       rel="noopener noreferrer"
                       className="about-wrapper__info-text--important-link"
                     >
-                      {blog || 'The data does not exist.'}
+                      <p className="about-wrapper__info-text-grid-item">
+                        {blog || 'The data does not exist.'}
+                      </p>
                     </a>
                   </p>
                 )}
                 {tistory && (
-                  <p className="about-wrapper__info-text">
+                  <p className="about-wrapper__info-text-grid">
                     {titleTistory}
                     <a
                       href={tistory}
@@ -131,7 +137,9 @@ const About = () => {
                       rel="noopener noreferrer"
                       className="about-wrapper__info-text--important-link"
                     >
-                      {tistory || 'The data does not exist.'}
+                      <p className="about-wrapper__info-text-grid-item">
+                        {tistory || 'The data does not exist.'}
+                      </p>
                     </a>
                   </p>
                 )}
