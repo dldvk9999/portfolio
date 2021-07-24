@@ -28,7 +28,26 @@ const Projects = () => {
         <div className="project-wrapper">
           <Title title="Projects" />
           {projects.map((project) => {
-            const { title, info, info2, info3, url, repo, img, id } = project;
+            const {
+              title,
+              info,
+              info2,
+              info3,
+              url,
+              urltitle,
+              url2,
+              url2title,
+              url3,
+              url3title,
+              docu1,
+              docu2,
+              docu3,
+              docu1title,
+              docu2title,
+              docu3title,
+              img,
+              id,
+            } = project;
 
             return (
               <Row key={id}>
@@ -47,24 +66,93 @@ const Projects = () => {
                         <p className="mb-4">{info2 || ''}</p>
                         <p className="mb-4">{info3 || ''}</p>
                       </div>
-                      <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="cta-btn cta-btn--hero"
-                        href={url || '#!'}
-                      >
-                        Source Code
-                      </a>
-
-                      {repo && (
+                      {url && (
                         <a
-                          target="_blank"
+                          target={url}
                           rel="noopener noreferrer"
-                          className="cta-btn text-color-main"
-                          href={repo}
+                          className="cta-btn cta-btn--hero"
+                          // eslint-disable-next-line no-script-url
+                          href={url || 'javascript:void(0);'}
                         >
-                          Repo
+                          Source Code
+                          {(urltitle || ' You did not enter a url title.') && `${' '}${urltitle}`}
                         </a>
+                      )}
+
+                      {url2 && (
+                        <div>
+                          <br />
+                          <a
+                            target={url2}
+                            rel="noopener noreferrer"
+                            className="cta-btn cta-btn--hero"
+                            // eslint-disable-next-line no-script-url
+                            href={url2 || 'javascript:void(0);'}
+                          >
+                            Source Code
+                            {(url2title || ' You did not enter a url title.') &&
+                              `${' '}${url2title}`}
+                          </a>
+                        </div>
+                      )}
+
+                      {url3 && (
+                        <div>
+                          <br />
+                          <a
+                            target={url3}
+                            rel="noopener noreferrer"
+                            className="cta-btn cta-btn--hero"
+                            // eslint-disable-next-line no-script-url
+                            href={url3 || 'javascript:void(0);'}
+                          >
+                            Source Code
+                            {(url3title || ' You did not enter a url title.') &&
+                              `${' '}${url3title}`}
+                          </a>
+                        </div>
+                      )}
+
+                      {docu1 && (
+                        <div>
+                          <br />
+                          <a
+                            target={docu1}
+                            rel="noopener noreferrer"
+                            className="cta-btn text-color-main"
+                            href={docu1}
+                          >
+                            {docu1title || ' You did not enter a docu title.'}
+                          </a>
+                        </div>
+                      )}
+
+                      {docu2 && (
+                        <div>
+                          <br />
+                          <a
+                            target={docu2}
+                            rel="noopener noreferrer"
+                            className="cta-btn text-color-main"
+                            href={docu2}
+                          >
+                            {docu2title || ' You did not enter a docu title.'}
+                          </a>
+                        </div>
+                      )}
+
+                      {docu3 && (
+                        <div>
+                          <br />
+                          <a
+                            target={docu3}
+                            rel="noopener noreferrer"
+                            className="cta-btn text-color-main"
+                            href={docu3}
+                          >
+                            {docu3title || ' You did not enter a docu title.'}
+                          </a>
+                        </div>
                       )}
                     </div>
                   </Fade>

@@ -152,8 +152,18 @@ export const projectsData = [
       '본 프로젝트는 카페와 같은 공공장소에서 사용하는 랩톱(노트북)에 대해 사용자가 자리를 비울 경우 드라이버단에서 자동으로 잠궈지게 되고, 이를 얼굴인식을 이용하여 잠금해제하는 프로젝트 입니다.',
     info3:
       '코로나 시국에 사람들은 마스크를 착용하고 있기 때문에 얼굴인식을 대체할 음성인식이나 블루투스를 이용해 스마트폰과 연결하여 원격으로 잠금 및 해제하는 기능을 구현하였습니다.',
-    url: '',
-    repo: '', // if no repo, the button will not show up
+    url: 'https://github.com/dldvk9999/Laptop_Security_Program',
+    url2: '',
+    url3: '',
+    urltitle: 'for PC & Android',
+    url2title: '',
+    url3title: '',
+    docu1: '',
+    docu2: '',
+    docu3: '',
+    docu1title: '',
+    docu2title: '',
+    docu3title: '',
   },
   {
     id: nanoid(),
@@ -168,8 +178,18 @@ export const projectsData = [
       '본 프로젝트는 유명 유튜버, BJ, 연예인 등을 비롯한 각종 인플루언서들을 위해 딥러닝을 이용한 악성 문자열 필터링 프로젝트입니다.',
     info3:
       'PC, Android, IOS 모든 버전으로 개발하였으며 기사의 댓글은 물론 실시간 채팅의 닉네임 및 내용까지 바로바로 필터링할 수 있습니다.',
-    url: '',
-    repo: '', // if no repo, the button will not show up
+    url: 'https://github.com/dldvk9999/PeaceKeeper_pc',
+    url2: 'https://github.com/dldvk9999/PeaceKeeper_android',
+    url3: 'https://github.com/dldvk9999/PeaceKeeper_ios',
+    urltitle: 'for PC',
+    url2title: 'for Android',
+    url3title: 'for IOS',
+    docu1: '',
+    docu2: '',
+    docu3: '',
+    docu1title: '',
+    docu2title: '',
+    docu3title: '',
   },
   {
     id: nanoid(),
@@ -184,9 +204,19 @@ export const projectsData = [
     info2:
       '본 프로젝트는 포스트 코로나에 맞춰 중소기업의 사이트를 취약점 분석하고 모의해킹하여 그에 맞는 해결방안 및 솔루션을 제시하는 프로젝트입니다.',
     info3:
-      '실제 중소기업 사이트가 아닌 임의로 개발된 모의 사이트에서 진행하였으며 팀 단위로 진행하였습니다.',
+      '실제 중소기업 사이트가 아닌 임의로 개발된 모의 사이트에서 진행하였으며 팀 단위로 진행하였습니다. (* 아래 문서는 구글 뷰어를 통해서 보므로 이미지가 노출되지 않거나 데이터가 깨져 보일 수 있습니다. 다운로드해서 보면 이를 해결하실 수 있습니다.)',
     url: '',
-    repo: '', // if no repo, the button will not show up
+    url2: '',
+    url3: '',
+    urltitle: '',
+    url2title: '',
+    url3title: '',
+    docu1: 'https://drive.google.com/file/d/1eCv1n4vdd4Z51HlP0Eeaq39Bf13V0jZN/view?usp=sharing',
+    docu2: 'https://drive.google.com/file/d/1x0aekRjXgyB2oSTYt9foFuPTNkI05-Qv/view?usp=sharing',
+    docu3: 'https://drive.google.com/file/d/1SemtpMmF2OErg01vFBLYNc6A1NKIFMMs/view?usp=sharing',
+    docu1title: '수행계획서 보기',
+    docu2title: '수행 결과 보고서 보기',
+    docu3title: '최종 보고서 보기',
   },
   {
     id: nanoid(),
@@ -194,11 +224,22 @@ export const projectsData = [
     img1: 'site/slide_1.PNG',
     title: 'Portfolio Site',
     info: 'Gatsby와 React를 사용한 포트폴리오 사이트',
-    info2: '지금 현재 보고계신 이 사이트에 대한 정보입니다.',
+    info2:
+      '지금 현재 보고계신 이 사이트에 대한 정보이며 해당 Github Repository는 개인정보의 문제로 Private으로 설정하여 .zip 파일을 다운받을 수 있는 링크를 걸어두었습니다.',
     info3:
       '이 외에도 C언어나 Python 등을 이용한 다른 프로그램들을 보고 싶으시면 아래 CONTACT 섹션 하단에 Github 이모티콘을 클릭해주시면 감사하겠습니다.',
-    url: '',
-    repo: '', // if no repo, the button will not show up
+    url: 'https://github.com/dldvk9999/portfolio/archive/refs/heads/master.zip',
+    url2: '',
+    url3: '',
+    urltitle: 'Download',
+    url2title: '',
+    url3title: '',
+    docu1: '',
+    docu2: '',
+    docu3: '',
+    docu1title: '',
+    docu2title: '',
+    docu3title: '',
   },
 ];
 
