@@ -23,9 +23,9 @@ const Certificates = () => {
   }, []);
 
   return (
-    <section id="projects">
+    <section id="certificate">
       <Container>
-        <div className="project-wrapper">
+        <div className="certificate-wrapper">
           <Title title="CERTIFICATES" />
           {certificates.map((certificate) => {
             const { title, info, info2, info3, info4, info5, url, img, id } = certificate;
@@ -40,8 +40,8 @@ const Certificates = () => {
                     delay={500}
                     distance="30px"
                   >
-                    <div className="project-wrapper__text">
-                      <h3 className="project-wrapper__text-title">
+                    <div className="certificate-wrapper__text">
+                      <h3 className="certificate-wrapper__text-title">
                         {title || 'Certificate Title'}
                       </h3>
                       <div>
@@ -62,12 +62,12 @@ const Certificates = () => {
                     delay={1000}
                     distance="30px"
                   >
-                    <div className="project-wrapper__image">
+                    <div className="certificate-wrapper__image">
                       <a
                         // eslint-disable-next-line no-script-url
                         href={url || 'javascript:void(0)'}
                         target={url}
-                        aria-label="Project Link"
+                        aria-label="Certificate Link"
                         rel="noopener noreferrer"
                       >
                         <Tilt

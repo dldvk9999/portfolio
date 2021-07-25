@@ -50,7 +50,6 @@
     }
 
     &__image {
-      width: fit-content;
       margin: 0 auto;
 
       @include respond(tab-land) {

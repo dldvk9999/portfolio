@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Fade from 'react-reveal/Fade';
-import Tilt from 'react-tilt';
 import { Container, Row, Col } from 'react-bootstrap';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
@@ -45,7 +44,14 @@ const Projects = () => {
               docu1title,
               docu2title,
               docu3title,
-              img,
+              img1,
+              img2,
+              img3,
+              img4,
+              img5,
+              img6,
+              img7,
+              img8,
               id,
             } = project;
 
@@ -166,31 +172,18 @@ const Projects = () => {
                     distance="30px"
                   >
                     <div className="project-wrapper__image">
-                      <a
-                        // eslint-disable-next-line no-script-url
-                        href={url || 'javascript:void(0);'}
-                        target={url}
-                        aria-label="Project Link"
-                        rel="noopener noreferrer"
-                      >
-                        <Tilt
-                          options={{
-                            reverse: false,
-                            max: 8,
-                            perspective: 1000,
-                            scale: 1,
-                            speed: 300,
-                            transition: true,
-                            axis: null,
-                            reset: true,
-                            easing: 'cubic-bezier(.03,.98,.52,.99)',
-                          }}
-                        >
-                          <div data-tilt className="thumbnail rounded">
-                            <ImageSlider alt={title} filename={img} />
-                          </div>
-                        </Tilt>
-                      </a>
+                      <div data-tilt className="thumbnail rounded">
+                        <ImageSlider
+                          img1={img1 || null}
+                          img2={img2 || null}
+                          img3={img3 || null}
+                          img4={img4 || null}
+                          img5={img5 || null}
+                          img6={img6 || null}
+                          img7={img7 || null}
+                          img8={img8 || null}
+                        />
+                      </div>
                     </div>
                   </Fade>
                 </Col>
