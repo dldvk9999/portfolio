@@ -26,6 +26,7 @@ const Projects = () => {
       <Container>
         <div className="project-wrapper">
           <Title title="Projects" />
+          <div className="project-subtitle">* 이미지에 마우스를 올리시면 자동재생이 멈춤니다.</div>
           {projects.map((project) => {
             const {
               title,

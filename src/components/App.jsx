@@ -28,7 +28,7 @@ function App() {
   const [projects, setProjects] = useState([]);
   const [contact, setContact] = useState({});
   const [footer, setFooter] = useState({});
-  const [user, setUser] = useState(true);
+  const [user, setUser] = useState(null);
   const authenticated = user != null;
   const loginAuth = ({ password }) => setUser(signIn({ password }));
 

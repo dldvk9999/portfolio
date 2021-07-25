@@ -232,7 +232,7 @@ export const projectsData = [
     info3:
       '이 외에도 C언어나 Python 등을 이용한 다른 프로그램들을 보고 싶으시면 아래 CONTACT 섹션 하단에 Github 이모티콘을 클릭해주시면 감사하겠습니다.',
     url: 'https://github.com/dldvk9999/portfolio/archive/refs/heads/master.zip',
-    url2: 'https://github.com/dldvk9999/portfolio',
+    url2: '',
     url3: '',
     urltitle: 'Download',
     url2title: '',

@@ -19,14 +19,7 @@ const App = ({ img1, img2, img3, img4, img5, img6, img7, img8 }) => {
   return (
     <div className="App">
       <div>
-        <AliceCarousel
-          autoPlayInterval="4000"
-          autoPlayControls
-          autoHeight
-          activeIndex
-          infinite
-          keyboardNavigation
-        >
+        <AliceCarousel autoPlayInterval="4000" autoHeight autoPlay infinite keyboardNavigation>
           {images2.map((img) => {
             return <img src={img} className="sliderimg" width="600" alt="" />;
           })}
