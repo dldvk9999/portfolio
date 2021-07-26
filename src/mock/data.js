@@ -21,7 +21,6 @@ export const heroData = {
   title2: ' 입니다.',
   subtitle: '이제 제 소개를 시작하겠습니다.',
   cta: '시작하기',
-  deauth: '인증해제',
 };
 
 // ABOUT DATA

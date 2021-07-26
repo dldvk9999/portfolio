@@ -16,46 +16,50 @@
   text-align-last: center;
 
   .login-title {
-    font-size: 4.5rem;
+    font-size: 2.5vw;
     font-weight: 700;
     margin-bottom: 1rem;
-    text-align: left;
+    text-align-last: left;
 
     @include respond(tab-land) {
-      font-size: 3.5rem;
+      font-size: 4.9vw;
+      text-align-last: center;
     }
     @include respond(tab-port) {
-      font-size: 3.1rem;
-      text-align: center;
+      font-size: 4.9vw;
+      text-align-last: center;
     }
     @include respond(phone) {
-      font-size: 3rem;
+      font-size: 4.9vw;
       line-height: 1.2;
+      text-align-last: center;
     }
     @include respond(phone-xs) {
-      font-size: 2.3rem;
+      font-size: 4.9vw;
+      text-align-last: center;
     }
   }
 
   .login-input {
-    font-size: 3rem;
+    font-size: 2.5vw;
     margin-bottom: 1rem;
-    text-align: center;
+    text-align-last: center;
     margin-right: 1rem;
 
     @include respond(tab-land) {
-      font-size: 3.2rem;
+      font-size: 4.9vw;
     }
     @include respond(tab-port) {
-      font-size: 2.5rem;
+      font-size: 4.7vw;
       text-align: center;
     }
     @include respond(phone) {
-      font-size: 1.7rem;
+      font-size: 3.8vw;
       line-height: 1;
+      width: 100%;
     }
     @include respond(phone-xs) {
-      font-size: 1.2rem;
+      font-size: 4vw;
     }
   }
 }

@@ -7,7 +7,7 @@ import PortfolioContext from '../../context/context';
 
 const Header = () => {
   const { hero } = useContext(PortfolioContext);
-  const { title, name, title2, subtitle, cta, deauth } = hero;
+  const { title, name, title2, subtitle, cta } = hero;
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -21,10 +21,6 @@ const Header = () => {
       setIsDesktop(false);
     }
   }, []);
-
-  const handleClick = () => {
-    window.location.reload();
-  };
 
   return (
     <section id="hero" className="jumbotron">
@@ -44,16 +40,6 @@ const Header = () => {
               <Link to="about" smooth duration={1000}>
                 {cta || 'Know more'}
               </Link>
-            </span>
-            <span>
-              <button
-                className="logout-btn cta-btn--hero"
-                onClick={handleClick}
-                smooth
-                duration={1000}
-              >
-                {deauth}
-              </button>
             </span>
           </p>
         </Fade>

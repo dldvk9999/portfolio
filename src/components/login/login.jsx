@@ -54,7 +54,6 @@ function Login() {
                 type="password"
                 placeholder={placeholder || 'Auth Key'}
                 onKeyPress={onKeyPress}
-                style={{ width: '100%' }}
               />
               <button className="login-btn cta-btn--hero" onClick={handleClick}>
                 {auth}

@@ -32,6 +32,22 @@ a:hover {
   @include respond(phone) {
     font-size: 2.8rem;
   }
+
+  &-sub {
+    font-size: $default-font-size;
+    margin-bottom: 4.5rem;
+  }
+}
+
+.section-title-nomargin {
+  margin: 0px;
+  font-size: $big-font-size;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  @include respond(phone) {
+    font-size: 2.8rem;
+  }
 }
 
 .dark-blue-text {
