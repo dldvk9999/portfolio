@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { signIn } from '../context/auth';
+import Floating from './Floating/Floating';
 import Hero from './Hero/Hero';
 import About from './About/About';
 import Certificates from './Certificates/Certificates';
@@ -51,6 +52,7 @@ function App() {
   }
   return (
     <PortfolioProvider value={{ hero, about, certificates, projects, contact, footer }}>
+      <Floating />
       <Hero />
       <About />
       <Certificates />
