@@ -79,7 +79,7 @@ const Projects = () => {
                         <a
                           target={url}
                           rel="noopener noreferrer"
-                          className="cta-btn cta-btn--hero"
+                          className="cta-btn-b cta-btn--hero"
                           // eslint-disable-next-line no-script-url
                           href={url || 'javascript:void(0);'}
                         >
@@ -94,7 +94,7 @@ const Projects = () => {
                           <a
                             target={url2}
                             rel="noopener noreferrer"
-                            className="cta-btn cta-btn--hero"
+                            className="cta-btn-b cta-btn--hero"
                             // eslint-disable-next-line no-script-url
                             href={url2 || 'javascript:void(0);'}
                           >
@@ -111,7 +111,7 @@ const Projects = () => {
                           <a
                             target={url3}
                             rel="noopener noreferrer"
-                            className="cta-btn cta-btn--hero"
+                            className="cta-btn-b cta-btn--hero"
                             // eslint-disable-next-line no-script-url
                             href={url3 || 'javascript:void(0);'}
                           >
@@ -128,7 +128,7 @@ const Projects = () => {
                           <a
                             target={docu1}
                             rel="noopener noreferrer"
-                            className="cta-btn text-color-main"
+                            className="cta-btn-b text-color-main"
                             href={docu1}
                           >
                             {docu1title || ' You did not enter a docu title.'}
@@ -142,7 +142,7 @@ const Projects = () => {
                           <a
                             target={docu2}
                             rel="noopener noreferrer"
-                            className="cta-btn text-color-main"
+                            className="cta-btn-b text-color-main"
                             href={docu2}
                           >
                             {docu2title || ' You did not enter a docu title.'}
@@ -156,7 +156,7 @@ const Projects = () => {
                           <a
                             target={docu3}
                             rel="noopener noreferrer"
-                            className="cta-btn text-color-main"
+                            className="cta-btn-b text-color-main"
                             href={docu3}
                           >
                             {docu3title || ' You did not enter a docu title.'}

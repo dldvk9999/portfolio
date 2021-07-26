@@ -154,7 +154,7 @@ const About = () => {
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="cta-btn cta-btn--resume"
+                      className="cta-btn-b cta-btn--resume"
                       href={resume}
                     >
                       Resume

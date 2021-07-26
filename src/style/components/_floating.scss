@@ -1,0 +1,35 @@
+.float-grid {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.float {
+    margin: 8px;
+    display: flex;
+    z-index: 1;
+    flex-direction: column;
+    flex-wrap: wrap;
+    transition: all 0.3s;
+    transform: translateY(-7rem);
+    align-items: center;
+
+    &:hover {
+        transform: translateY(0rem);
+        .float-navi {
+            transform: translateY(-16rem);
+        }
+    }
+
+    &-extendedIcon {
+        margin-right: 8px;
+    }
+}
+
+.fab {
+    &:hover {
+        transition: all 0.3s;
+        transform: scale(1.4);
+        margin: 10px 3rem;
+    }
+}

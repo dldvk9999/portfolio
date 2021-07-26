@@ -1,72 +1,77 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
 import { Link } from 'react-scroll';
+import SentimentVerySatisfiedIcon from '@material-ui/icons/SentimentVerySatisfied';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import DescriptionIcon from '@material-ui/icons/Description';
+import ComputerIcon from '@material-ui/icons/Computer';
+import ContactMailIcon from '@material-ui/icons/ContactMail';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import NavigationIcon from '@material-ui/icons/Navigation';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    '& > *': {
-      margin: theme.spacing(1),
-    },
-  },
-  extendedIcon: {
-    marginRight: theme.spacing(1),
-  },
-}));
-
 const FloatingActionButtons = () => {
-  const classes = useStyles();
-
   return (
-    <div
-      className={classes.root}
-      style={{
-        position: 'fixed',
-        'z-index': '1',
-        display: 'flex',
-        'flex-direction': 'row',
-        'align-content': 'center',
-        'flex-wrap': 'wrap',
-        'justify-content': 'center',
-      }}
-    >
-      <Fab variant="extended">
-        <NavigationIcon className={classes.extendedIcon} />
-        <Link to="hero" smooth duration={1000}>
-          main
-        </Link>
-      </Fab>
-      <Fab variant="extended">
-        <NavigationIcon className={classes.extendedIcon} />
-        <Link to="about" smooth duration={1000}>
-          about me
-        </Link>
-      </Fab>
-      <Fab variant="extended">
-        <NavigationIcon className={classes.extendedIcon} />
-        <Link to="certificate" smooth duration={1000}>
-          certificate
-        </Link>
-      </Fab>
-      <Fab variant="extended">
-        <NavigationIcon className={classes.extendedIcon} />
-        <Link to="projects" smooth duration={1000}>
-          projects
-        </Link>
-      </Fab>
-      <Fab variant="extended">
-        <NavigationIcon className={classes.extendedIcon} />
-        <Link to="contact" smooth duration={1000}>
-          contact
-        </Link>
-      </Fab>
-      <Fab variant="extended">
-        <NavigationIcon className={classes.extendedIcon} />
-        <a href="/" style={{ color: 'black' }}>
-          logout
-        </a>
-      </Fab>
+    <div className="float-grid">
+      <table className="float">
+        <tr className="float-navi" style={{ transition: 'all 1s', order: '1', padding: '2rem 0' }}>
+          <td>
+            <Fab variant="extended" class="MuiButtonBase-root MuiFab-root MuiFab-extended fab">
+              <NavigationIcon className="float-extendedIcon" />
+              navigate
+            </Fab>
+          </td>
+        </tr>
+        <tr style={{ verticalAlign: 'top' }}>
+          <td>
+            <Fab variant="extended" class="MuiButtonBase-root MuiFab-root MuiFab-extended fab">
+              <SentimentVerySatisfiedIcon className="float-extendedIcon" />
+              <Link to="hero" smooth duration={1000}>
+                main
+              </Link>
+            </Fab>
+          </td>
+          <td>
+            <Fab variant="extended" class="MuiButtonBase-root MuiFab-root MuiFab-extended fab">
+              <FavoriteIcon className="float-extendedIcon" />
+              <Link to="about" smooth duration={1000}>
+                about me
+              </Link>
+            </Fab>
+          </td>
+          <td>
+            <Fab variant="extended" class="MuiButtonBase-root MuiFab-root MuiFab-extended fab">
+              <DescriptionIcon className="float-extendedIcon" />
+              <Link to="certificate" smooth duration={1000}>
+                certificate
+              </Link>
+            </Fab>
+          </td>
+          <td>
+            <Fab variant="extended" class="MuiButtonBase-root MuiFab-root MuiFab-extended fab">
+              <ComputerIcon className="float-extendedIcon" />
+              <Link to="projects" smooth duration={1000}>
+                projects
+              </Link>
+            </Fab>
+          </td>
+          <td>
+            <Fab variant="extended" class="MuiButtonBase-root MuiFab-root MuiFab-extended fab">
+              <ContactMailIcon className="float-extendedIcon" />
+              <Link to="contact" smooth duration={1000}>
+                contact
+              </Link>
+            </Fab>
+          </td>
+          <td>
+            <Fab variant="extended" class="MuiButtonBase-root MuiFab-root MuiFab-extended fab">
+              <ExitToAppIcon className="float-extendedIcon" />
+              <a href="/" style={{ color: 'black' }}>
+                logout
+              </a>
+            </Fab>
+          </td>
+        </tr>
+      </table>
     </div>
   );
 };
