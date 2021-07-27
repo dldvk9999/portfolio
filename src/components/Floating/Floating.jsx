@@ -13,17 +13,17 @@ const FloatingActionButtons = () => {
   return (
     <div className="float-grid">
       <table className="float">
-        <tr className="float-navi" style={{ transition: 'all 1s', order: '1', padding: '2rem 0' }}>
+        <tr className="float-navi">
           <td>
-            <Fab variant="extended" class="MuiButtonBase-root MuiFab-root MuiFab-extended fab">
+            <Fab variant="extended" className="MuiButtonBase-root MuiFab-root MuiFab-extended fab">
               <NavigationIcon className="float-extendedIcon" />
               navigate
             </Fab>
           </td>
         </tr>
-        <tr style={{ verticalAlign: 'top' }}>
+        <tr className="float-child">
           <td>
-            <Fab variant="extended" class="MuiButtonBase-root MuiFab-root MuiFab-extended fab">
+            <Fab variant="extended" className="MuiButtonBase-root MuiFab-root MuiFab-extended fab">
               <SentimentVerySatisfiedIcon className="float-extendedIcon" />
               <Link to="hero" smooth duration={1000}>
                 main
@@ -31,7 +31,7 @@ const FloatingActionButtons = () => {
             </Fab>
           </td>
           <td>
-            <Fab variant="extended" class="MuiButtonBase-root MuiFab-root MuiFab-extended fab">
+            <Fab variant="extended" className="MuiButtonBase-root MuiFab-root MuiFab-extended fab">
               <FavoriteIcon className="float-extendedIcon" />
               <Link to="about" smooth duration={1000}>
                 about me
@@ -39,7 +39,7 @@ const FloatingActionButtons = () => {
             </Fab>
           </td>
           <td>
-            <Fab variant="extended" class="MuiButtonBase-root MuiFab-root MuiFab-extended fab">
+            <Fab variant="extended" className="MuiButtonBase-root MuiFab-root MuiFab-extended fab">
               <DescriptionIcon className="float-extendedIcon" />
               <Link to="certificate" smooth duration={1000}>
                 certificate
@@ -47,7 +47,7 @@ const FloatingActionButtons = () => {
             </Fab>
           </td>
           <td>
-            <Fab variant="extended" class="MuiButtonBase-root MuiFab-root MuiFab-extended fab">
+            <Fab variant="extended" className="MuiButtonBase-root MuiFab-root MuiFab-extended fab">
               <ComputerIcon className="float-extendedIcon" />
               <Link to="projects" smooth duration={1000}>
                 projects
@@ -55,7 +55,7 @@ const FloatingActionButtons = () => {
             </Fab>
           </td>
           <td>
-            <Fab variant="extended" class="MuiButtonBase-root MuiFab-root MuiFab-extended fab">
+            <Fab variant="extended" className="MuiButtonBase-root MuiFab-root MuiFab-extended fab">
               <ContactMailIcon className="float-extendedIcon" />
               <Link to="contact" smooth duration={1000}>
                 contact
@@ -63,7 +63,7 @@ const FloatingActionButtons = () => {
             </Fab>
           </td>
           <td>
-            <Fab variant="extended" class="MuiButtonBase-root MuiFab-root MuiFab-extended fab">
+            <Fab variant="extended" className="MuiButtonBase-root MuiFab-root MuiFab-extended fab">
               <ExitToAppIcon className="float-extendedIcon" />
               <a href="/" style={{ color: 'black' }}>
                 logout

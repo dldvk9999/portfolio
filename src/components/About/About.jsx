@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useContext, useState, useEffect } from 'react';
 import Fade from 'react-reveal/Fade';
 import { Container, Row, Col } from 'react-bootstrap';
@@ -152,10 +153,12 @@ const About = () => {
                 {resume && (
                   <span className="d-flex mt-3">
                     <a
-                      target="_blank"
+                      // target={resume}
                       rel="noopener noreferrer"
                       className="cta-btn-b cta-btn--resume"
-                      href={resume}
+                      // href={resume}
+                      // eslint-disable-next-line no-script-url
+                      href={'javascript:alert("준비중입니다.");'}
                     >
                       Resume
                     </a>

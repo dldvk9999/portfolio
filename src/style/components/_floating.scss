@@ -4,6 +4,24 @@
     z-index: 1;
 }
 
+.float-navi {
+    transition: all 0.3s;
+    order: 1;
+    padding: 2rem 0;
+    align-items: flex-start;
+}
+
+.float-child {
+    align-items: flex-start;
+    vertical-align: top;
+    @include respond(phone) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 .float {
     margin: 8px;
     display: flex;
@@ -14,11 +32,21 @@
     transform: translateY(-7rem);
     align-items: center;
 
+    @include respond(phone) {
+        transform: translateY(-17rem);
+    }
+
     &:hover {
-        transform: translateY(0rem);
         .float-navi {
             transform: translateY(-16rem);
+            visibility: hidden;
+
+            @include respond(phone) {
+                transform: translateY(-26rem);
+                visibility: hidden;
+            }
         }
+        transform: translateY(0rem);
     }
 
     &-extendedIcon {

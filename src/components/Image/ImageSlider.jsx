@@ -2,6 +2,7 @@ import React from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import PropTypes from 'prop-types';
+import { nanoid } from 'nanoid';
 
 const App = ({ img1, img2, img3, img4, img5, img6, img7, img8 }) => {
   const images = [img1, img2, img3, img4, img5, img6, img7, img8];
@@ -21,7 +22,7 @@ const App = ({ img1, img2, img3, img4, img5, img6, img7, img8 }) => {
       <div>
         <AliceCarousel autoPlayInterval="4000" autoHeight autoPlay infinite keyboardNavigation>
           {images2.map((img) => {
-            return <img src={img} className="sliderimg" width="600" alt="" />;
+            return <img src={img} className="sliderimg" width="600" alt="" key={nanoid} />;
           })}
         </AliceCarousel>
       </div>

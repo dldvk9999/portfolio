@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { signIn } from '../context/auth';
+import { signIn, authPass } from '../context/auth';
 import Floating from './Floating/Floating';
 import Hero from './Hero/Hero';
 import About from './About/About';
@@ -43,24 +43,46 @@ function App() {
     setFooter({ ...footerData });
   }, []);
 
-  if (!authenticated) {
+  if (window.location.href.match('/?')) {
+    const params = window.location.href.split('/?')[1];
+
+    // URL로 암호 입력해서 인증 되었을 때
+    if (params && authPass({ params })) {
+      return (
+        <PortfolioProvider value={{ hero, about, certificates, projects, contact, footer }}>
+          <Floating />
+          <Hero />
+          <About />
+          <Certificates />
+          <Projects />
+          <Contact />
+          <Footer />
+        </PortfolioProvider>
+      );
+    }
+
+    // Login 페이지에서 암호를 입력할 때
+    if (!authenticated) {
+      return (
+        <PortfolioProvider value={{ login, loginAuth }}>
+          <Login />
+        </PortfolioProvider>
+      );
+    }
+
+    // Login 페이지의 암호로 인증되었을 때
     return (
-      <PortfolioProvider value={{ login, loginAuth }}>
-        <Login />
+      <PortfolioProvider value={{ hero, about, certificates, projects, contact, footer }}>
+        <Floating />
+        <Hero />
+        <About />
+        <Certificates />
+        <Projects />
+        <Contact />
+        <Footer />
       </PortfolioProvider>
     );
   }
-  return (
-    <PortfolioProvider value={{ hero, about, certificates, projects, contact, footer }}>
-      <Floating />
-      <Hero />
-      <About />
-      <Certificates />
-      <Projects />
-      <Contact />
-      <Footer />
-    </PortfolioProvider>
-  );
 }
 
 export default App;
