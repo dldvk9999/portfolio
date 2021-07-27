@@ -31,6 +31,7 @@ function App() {
   const [footer, setFooter] = useState({});
   const [user, setUser] = useState(null);
   const authenticated = user != null;
+  const [params, setParams] = useState(null);
   const loginAuth = ({ password }) => setUser(signIn({ password }));
 
   useEffect(() => {
@@ -41,36 +42,11 @@ function App() {
     setProjects([...projectsData]);
     setContact({ ...contactData });
     setFooter({ ...footerData });
+    setParams(window.location.href.split('/?')[1]);
   }, []);
 
-  if (window.location.href.match('/?')) {
-    const params = window.location.href.split('/?')[1];
-
-    // URL로 암호 입력해서 인증 되었을 때
-    if (params && authPass({ params })) {
-      return (
-        <PortfolioProvider value={{ hero, about, certificates, projects, contact, footer }}>
-          <Floating />
-          <Hero />
-          <About />
-          <Certificates />
-          <Projects />
-          <Contact />
-          <Footer />
-        </PortfolioProvider>
-      );
-    }
-
-    // Login 페이지에서 암호를 입력할 때
-    if (!authenticated) {
-      return (
-        <PortfolioProvider value={{ login, loginAuth }}>
-          <Login />
-        </PortfolioProvider>
-      );
-    }
-
-    // Login 페이지의 암호로 인증되었을 때
+  // URL로 암호 입력해서 인증 되었을 때
+  if (params && authPass({ params })) {
     return (
       <PortfolioProvider value={{ hero, about, certificates, projects, contact, footer }}>
         <Floating />
@@ -83,6 +59,28 @@ function App() {
       </PortfolioProvider>
     );
   }
+
+  // Login 페이지에서 암호를 입력할 때
+  if (!authenticated) {
+    return (
+      <PortfolioProvider value={{ login, loginAuth }}>
+        <Login />
+      </PortfolioProvider>
+    );
+  }
+
+  // Login 페이지의 암호로 인증되었을 때
+  return (
+    <PortfolioProvider value={{ hero, about, certificates, projects, contact, footer }}>
+      <Floating />
+      <Hero />
+      <About />
+      <Certificates />
+      <Projects />
+      <Contact />
+      <Footer />
+    </PortfolioProvider>
+  );
 }
 
 export default App;
