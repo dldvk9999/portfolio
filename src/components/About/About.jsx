@@ -15,10 +15,10 @@ const About = () => {
     degree,
     career1,
     career2,
-    career3,
-    career4,
-    career5,
-    career6,
+    activity1,
+    activity2,
+    activity3,
+    activity4,
     tel,
     email,
     blog,
@@ -32,6 +32,7 @@ const About = () => {
   const [titleBirth] = useState('생년월일 : ');
   const [titleDegree] = useState('최종학력 : ');
   const [titleCareer] = useState('경력사항 : ');
+  const [titleActivity] = useState('수행활동 : ');
   const [titleTel] = useState('Tel : ');
   const [titleEmail] = useState('Email : ');
   const [titleBlog] = useState('블로그 : ');
@@ -89,21 +90,21 @@ const About = () => {
                   <p className="about-wrapper__info-text-grid-item">
                     {career2 || 'The data does not exist.'}
                   </p>
-                  <p className="about-wrapper__info-text-grid-item" />
+                  <p className="about-wrapper__info-text-grid-item">{titleActivity}</p>
                   <p className="about-wrapper__info-text-grid-item">
-                    {career3 || 'The data does not exist.'}
+                    {activity1 || 'The data does not exist.'}
                   </p>
                   <p className="about-wrapper__info-text-grid-item" />
                   <p className="about-wrapper__info-text-grid-item">
-                    {career4 || 'The data does not exist.'}
+                    {activity2 || 'The data does not exist.'}
                   </p>
                   <p className="about-wrapper__info-text-grid-item" />
                   <p className="about-wrapper__info-text-grid-item">
-                    {career5 || 'The data does not exist.'}
+                    {activity3 || 'The data does not exist.'}
                   </p>
                   <p className="about-wrapper__info-text-grid-item" />
                   <p className="about-wrapper__info-text-grid-item">
-                    {career6 || 'The data does not exist.'}
+                    {activity4 || 'The data does not exist.'}
                   </p>
                 </p>
                 <p className="about-wrapper__info-text-grid">
@@ -153,15 +154,23 @@ const About = () => {
                 {resume && (
                   <span className="d-flex mt-3">
                     <a
-                      // target={resume}
+                      target={resume}
                       rel="noopener noreferrer"
                       className="cta-btn-b cta-btn--resume"
-                      // href={resume}
-                      // eslint-disable-next-line no-script-url
-                      href={'javascript:alert("준비중입니다.");'}
+                      href={resume}
                     >
                       Resume
                     </a>
+                    <p
+                      style={{
+                        fontSize: '1.4rem',
+                        marginBottom: '0',
+                        alignSelf: 'center',
+                        marginLeft: '1rem',
+                      }}
+                    >
+                      * 다운받아서 보시길 권장합니다.
+                    </p>
                   </span>
                 )}
               </div>
