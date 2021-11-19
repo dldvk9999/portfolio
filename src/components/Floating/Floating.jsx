@@ -8,6 +8,7 @@ import ComputerIcon from '@material-ui/icons/Computer';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import NavigationIcon from '@material-ui/icons/Navigation';
+import * as auth from '../../context/auth';
 
 const FloatingActionButtons = () => {
   return (
@@ -65,8 +66,11 @@ const FloatingActionButtons = () => {
           <td>
             <Fab variant="extended" className="MuiButtonBase-root MuiFab-root MuiFab-extended fab">
               <ExitToAppIcon className="float-extendedIcon" />
-              <a href="/" style={{ color: 'black' }}>
-                logout
+              <a
+                href={`/?${auth.encryptAES(String(new Date().getTime()))}`}
+                style={{ color: 'black' }}
+              >
+                Bypass URL
               </a>
             </Fab>
           </td>

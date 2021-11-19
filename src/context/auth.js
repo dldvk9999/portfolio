@@ -3,8 +3,7 @@ const crypto = require('crypto');
 
 const key = '9945ef113707f96255008d580492b9e8';
 
-/*
-const encryptAES = (plainText) => {
+export const encryptAES = (plainText) => {
   const iv = crypto.randomBytes(16);
 
   const cipher = crypto.createCipheriv('aes-256-cbc', key, iv);
@@ -13,7 +12,6 @@ const encryptAES = (plainText) => {
 
   return iv.toString('hex') + encrypted.toString('hex');
 };
-*/
 
 const decryptAES = (cipherText) => {
   const iv = Buffer.from(cipherText.substring(0, 32), 'hex');

@@ -13,7 +13,7 @@ const CertificateImg = ({ filename, alt }) => (
               relativePath
               name
               childImageSharp {
-                fluid(maxWidth: 595, quality: 100) {
+                fluid(maxWidth: 1000, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -30,7 +30,8 @@ const CertificateImg = ({ filename, alt }) => (
       const imageFixed = image.node.childImageSharp.fluid;
       return (
         <Img
-          style={{ display: 'block' }}
+          style={{ maxHeight: '72vh' }}
+          imgStyle={{ objectFit: 'contain' }}
           className="rounded shadow-lg"
           alt={alt}
           fluid={imageFixed}
