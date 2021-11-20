@@ -63,66 +63,100 @@ const About = () => {
           <Col md={6} sm={12}>
             <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
               <div className="about-wrapper__info">
-                <p className="about-wrapper__info-text-grid">
-                  <p className="about-wrapper__info-text-grid-item">{titleName}</p>
-                  <p className="about-wrapper__info-text-grid-item">
-                    {name || 'The data does not exist.'}
-                  </p>
+                <p
+                  style={{
+                    display: 'grid',
+                    textAlign: 'left',
+                    gridTemplateColumns: '8rem auto',
+                    gridTemplateRows: 'auto auto auto',
+                  }}
+                >
+                  <p>{titleName}</p>
+                  <p>{name || 'The data does not exist.'}</p>
                 </p>
-                <p className="about-wrapper__info-text-grid">
-                  <p className="about-wrapper__info-text-grid-item">{titleBirth}</p>
-                  <p className="about-wrapper__info-text-grid-item">
-                    {birth || 'The data does not exist.'}
-                  </p>
+                <p
+                  style={{
+                    display: 'grid',
+                    textAlign: 'left',
+                    gridTemplateColumns: '8rem auto',
+                    gridTemplateRows: 'auto auto auto',
+                  }}
+                >
+                  <p>{titleBirth}</p>
+                  <p>{birth || 'The data does not exist.'}</p>
                 </p>
-                <p className="about-wrapper__info-text-grid">
-                  <p className="about-wrapper__info-text-grid-item">{titleDegree}</p>
-                  <p className="about-wrapper__info-text-grid-item">
-                    {degree || 'The data does not exist.'}
-                  </p>
+                <p
+                  style={{
+                    display: 'grid',
+                    textAlign: 'left',
+                    gridTemplateColumns: '8rem auto',
+                    gridTemplateRows: 'auto auto auto',
+                  }}
+                >
+                  <p>{titleDegree}</p>
+                  <p>{degree || 'The data does not exist.'}</p>
                 </p>
-                <p className="about-wrapper__info-text-grid">
-                  <p className="about-wrapper__info-text-grid-item">{titleCareer}</p>
-                  <p className="about-wrapper__info-text-grid-item">
-                    {career1 || 'The data does not exist.'}
-                  </p>
-                  <p className="about-wrapper__info-text-grid-item">&nbsp;</p>
-                  <p className="about-wrapper__info-text-grid-item">
-                    {career2 || 'The data does not exist.'}
-                  </p>
+                <p
+                  style={{
+                    display: 'grid',
+                    textAlign: 'left',
+                    gridTemplateColumns: '8rem auto',
+                    gridTemplateRows: 'auto auto auto',
+                  }}
+                >
+                  <p>{titleCareer}</p>
+                  <p>{career1 || 'The data does not exist.'}</p>
+                  <p>&nbsp;</p>
+                  <p>{career2 || 'The data does not exist.'}</p>
                 </p>
-                <p className="about-wrapper__info-text-grid">
-                  <p className="about-wrapper__info-text-grid-item">{titleActivity}</p>
-                  <p className="about-wrapper__info-text-grid-item">
-                    {activity1 || 'The data does not exist.'}
-                  </p>
-                  <p className="about-wrapper__info-text-grid-item">&nbsp;</p>
-                  <p className="about-wrapper__info-text-grid-item">
-                    {activity2 || 'The data does not exist.'}
-                  </p>
-                  <p className="about-wrapper__info-text-grid-item">&nbsp;</p>
-                  <p className="about-wrapper__info-text-grid-item">
-                    {activity3 || 'The data does not exist.'}
-                  </p>
-                  <p className="about-wrapper__info-text-grid-item">&nbsp;</p>
-                  <p className="about-wrapper__info-text-grid-item">
-                    {activity4 || 'The data does not exist.'}
-                  </p>
+                <p
+                  style={{
+                    display: 'grid',
+                    textAlign: 'left',
+                    gridTemplateColumns: '8rem auto',
+                    gridTemplateRows: 'auto auto auto',
+                  }}
+                >
+                  <p>{titleActivity}</p>
+                  <p>{activity1 || 'The data does not exist.'}</p>
+                  <p>&nbsp;</p>
+                  <p>{activity2 || 'The data does not exist.'}</p>
+                  <p>&nbsp;</p>
+                  <p>{activity3 || 'The data does not exist.'}</p>
+                  <p>&nbsp;</p>
+                  <p>{activity4 || 'The data does not exist.'}</p>
                 </p>
-                <p className="about-wrapper__info-text-grid">
-                  <p className="about-wrapper__info-text-grid-item">{titleTel}</p>
-                  <p className="about-wrapper__info-text-grid-item">
-                    {tel || 'The data does not exist.'}
-                  </p>
+                <p
+                  style={{
+                    display: 'grid',
+                    textAlign: 'left',
+                    gridTemplateColumns: '8rem auto',
+                    gridTemplateRows: 'auto auto auto',
+                  }}
+                >
+                  <p>{titleTel}</p>
+                  <p>{tel || 'The data does not exist.'}</p>
                 </p>
-                <p className="about-wrapper__info-text-grid">
-                  <p className="about-wrapper__info-text-grid-item">{titleEmail}</p>
-                  <p className="about-wrapper__info-text-grid-item">
-                    {email || 'The data does not exist.'}
-                  </p>
+                <p
+                  style={{
+                    display: 'grid',
+                    textAlign: 'left',
+                    gridTemplateColumns: '8rem auto',
+                    gridTemplateRows: 'auto auto auto',
+                  }}
+                >
+                  <p>{titleEmail}</p>
+                  <p>{email || 'The data does not exist.'}</p>
                 </p>
                 {blog && (
-                  <p className="about-wrapper__info-text-grid">
+                  <p
+                    style={{
+                      display: 'grid',
+                      textAlign: 'left',
+                      gridTemplateColumns: '8rem auto',
+                      gridTemplateRows: 'auto auto auto',
+                    }}
+                  >
                     {titleBlog}
                     <a
                       href={blog}
@@ -131,14 +165,19 @@ const About = () => {
                       rel="noopener noreferrer"
                       className="about-wrapper__info-text--important-link"
                     >
-                      <p className="about-wrapper__info-text-grid-item">
-                        {blog || 'The data does not exist.'}
-                      </p>
+                      <p>{blog || 'The data does not exist.'}</p>
                     </a>
                   </p>
                 )}
                 {tistory && (
-                  <p className="about-wrapper__info-text-grid">
+                  <p
+                    style={{
+                      display: 'grid',
+                      textAlign: 'left',
+                      gridTemplateColumns: '8rem auto',
+                      gridTemplateRows: 'auto auto auto',
+                    }}
+                  >
                     {titleTistory}
                     <a
                       href={tistory}
@@ -147,9 +186,7 @@ const About = () => {
                       rel="noopener noreferrer"
                       className="about-wrapper__info-text--important-link"
                     >
-                      <p className="about-wrapper__info-text-grid-item">
-                        {tistory || 'The data does not exist.'}
-                      </p>
+                      <p>{tistory || 'The data does not exist.'}</p>
                     </a>
                   </p>
                 )}
