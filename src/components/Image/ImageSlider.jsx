@@ -21,7 +21,7 @@ const App = ({ img1, img2, img3, img4, img5, img6, img7, img8 }) => {
   return (
     <div className="App">
       <div>
-        <AliceCarousel autoPlayInterval="4000" infinite keyboardNavigation>
+        <AliceCarousel autoPlayInterval="4000" infinite autoPlay keyboardNavigation>
           {images2.map((img) => {
             return (
               <StaticQuery
