@@ -63,91 +63,105 @@ const About = () => {
           <Col md={6} sm={12}>
             <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
               <div className="about-wrapper__info">
-                <p
-                  style={{
-                    display: 'grid',
-                    textAlign: 'left',
-                    gridTemplateColumns: '8rem auto',
-                    gridTemplateRows: 'auto auto auto',
-                  }}
-                >
-                  <p>{titleName}</p>
-                  <p>{name || 'The data does not exist.'}</p>
-                </p>
-                <p
-                  style={{
-                    display: 'grid',
-                    textAlign: 'left',
-                    gridTemplateColumns: '8rem auto',
-                    gridTemplateRows: 'auto auto auto',
-                  }}
-                >
-                  <p>{titleBirth}</p>
-                  <p>{birth || 'The data does not exist.'}</p>
-                </p>
-                <p
-                  style={{
-                    display: 'grid',
-                    textAlign: 'left',
-                    gridTemplateColumns: '8rem auto',
-                    gridTemplateRows: 'auto auto auto',
-                  }}
-                >
-                  <p>{titleDegree}</p>
-                  <p>{degree || 'The data does not exist.'}</p>
-                </p>
-                <p
-                  style={{
-                    display: 'grid',
-                    textAlign: 'left',
-                    gridTemplateColumns: '8rem auto',
-                    gridTemplateRows: 'auto auto auto',
-                  }}
-                >
-                  <p>{titleCareer}</p>
-                  <p>{career1 || 'The data does not exist.'}</p>
-                  <p>&nbsp;</p>
-                  <p>{career2 || 'The data does not exist.'}</p>
-                </p>
-                <p
-                  style={{
-                    display: 'grid',
-                    textAlign: 'left',
-                    gridTemplateColumns: '8rem auto',
-                    gridTemplateRows: 'auto auto auto',
-                  }}
-                >
-                  <p>{titleActivity}</p>
-                  <p>{activity1 || 'The data does not exist.'}</p>
-                  <p>&nbsp;</p>
-                  <p>{activity2 || 'The data does not exist.'}</p>
-                  <p>&nbsp;</p>
-                  <p>{activity3 || 'The data does not exist.'}</p>
-                  <p>&nbsp;</p>
-                  <p>{activity4 || 'The data does not exist.'}</p>
-                </p>
-                <p
-                  style={{
-                    display: 'grid',
-                    textAlign: 'left',
-                    gridTemplateColumns: '8rem auto',
-                    gridTemplateRows: 'auto auto auto',
-                  }}
-                >
-                  <p>{titleTel}</p>
-                  <p>{tel || 'The data does not exist.'}</p>
-                </p>
-                <p
-                  style={{
-                    display: 'grid',
-                    textAlign: 'left',
-                    gridTemplateColumns: '8rem auto',
-                    gridTemplateRows: 'auto auto auto',
-                  }}
-                >
-                  <p>{titleEmail}</p>
-                  <p>{email || 'The data does not exist.'}</p>
-                </p>
+                {name && (
+                  <p
+                    style={{
+                      display: 'grid',
+                      textAlign: 'left',
+                      gridTemplateColumns: '8rem auto',
+                      gridTemplateRows: 'auto auto auto',
+                    }}
+                  >
+                    <p>{titleName}</p>
+                    <p>{name || 'The data does not exist.'}</p>
+                  </p>
+                )}
+                {birth && (
+                  <p
+                    style={{
+                      display: 'grid',
+                      textAlign: 'left',
+                      gridTemplateColumns: '8rem auto',
+                      gridTemplateRows: 'auto auto auto',
+                    }}
+                  >
+                    <p>{titleBirth}</p>
+                    <p>{birth || 'The data does not exist.'}</p>
+                  </p>
+                )}
+                {degree && (
+                  <p
+                    style={{
+                      display: 'grid',
+                      textAlign: 'left',
+                      gridTemplateColumns: '8rem auto',
+                      gridTemplateRows: 'auto auto auto',
+                    }}
+                  >
+                    <p>{titleDegree}</p>
+                    <p>{degree || 'The data does not exist.'}</p>
+                  </p>
+                )}
+                {career1 && (
+                  <p
+                    style={{
+                      display: 'grid',
+                      textAlign: 'left',
+                      gridTemplateColumns: '8rem auto',
+                      gridTemplateRows: 'auto auto auto',
+                    }}
+                  >
+                    <p>{titleCareer}</p>
+                    <p>{career1 || 'The data does not exist.'}</p>
+                    <p>&nbsp;</p>
+                    <p>{career2 || 'The data does not exist.'}</p>
+                  </p>
+                )}
+                {activity1 && (
+                  <p
+                    style={{
+                      display: 'grid',
+                      textAlign: 'left',
+                      gridTemplateColumns: '8rem auto',
+                      gridTemplateRows: 'auto auto auto',
+                    }}
+                  >
+                    <p>{titleActivity}</p>
+                    <p>{activity1 || 'The data does not exist.'}</p>
+                    <p>&nbsp;</p>
+                    <p>{activity2 || 'The data does not exist.'}</p>
+                    <p>&nbsp;</p>
+                    <p>{activity3 || 'The data does not exist.'}</p>
+                    <p>&nbsp;</p>
+                    <p>{activity4 || 'The data does not exist.'}</p>
+                  </p>
+                )}
+                {tel && (
+                  <p
+                    style={{
+                      display: 'grid',
+                      textAlign: 'left',
+                      gridTemplateColumns: '8rem auto',
+                      gridTemplateRows: 'auto auto auto',
+                    }}
+                  >
+                    <p>{titleTel}</p>
+                    <p>{tel || 'The data does not exist.'}</p>
+                  </p>
+                )}
+                {email && (
+                  <p
+                    style={{
+                      display: 'grid',
+                      textAlign: 'left',
+                      gridTemplateColumns: '8rem auto',
+                      gridTemplateRows: 'auto auto auto',
+                    }}
+                  >
+                    <p>{titleEmail}</p>
+                    <p>{email || 'The data does not exist.'}</p>
+                  </p>
+                )}
                 {blog && (
                   <p
                     style={{
