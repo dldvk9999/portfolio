@@ -32,12 +32,14 @@ function App() {
   const [footer, setFooter] = useState({});
 
   useEffect(() => {
-    setHero({ ...heroData });
-    setAbout({ ...aboutData });
-    setCertificates([...certificatesData]);
-    setProjects([...projectsData]);
-    setContact({ ...contactData });
-    setFooter({ ...footerData });
+    if (typeof window !== 'undefined') {
+      setHero({ ...heroData });
+      setAbout({ ...aboutData });
+      setCertificates([...certificatesData]);
+      setProjects([...projectsData]);
+      setContact({ ...contactData });
+      setFooter({ ...footerData });
+    }
   }, []);
 
   return (
