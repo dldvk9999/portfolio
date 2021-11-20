@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { set, get } from 'idb-keyval';
 import Floating from './Floating/Floating';
 import Hero from './Hero/Hero';
 import About from './About/About';
@@ -19,6 +20,10 @@ import {
 } from '../mock/data';
 
 function App() {
+  get('resources:/').then((data) => {
+    if (data !== undefined) set('resources:/', '');
+  });
+  
   const [hero, setHero] = useState({});
   const [about, setAbout] = useState({});
   const [certificates, setCertificates] = useState([]);
