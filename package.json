@@ -4,6 +4,10 @@
   "description": "This is portfolio website for JongGeun Park.",
   "version": "0.1.0",
   "license": "MIT",
+  "engines": {
+    "node": "14.18.1",
+    "npm": "6.14.5"
+  },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
