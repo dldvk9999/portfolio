@@ -86,23 +86,25 @@ const About = () => {
                   <p className="about-wrapper__info-text-grid-item">
                     {career1 || 'The data does not exist.'}
                   </p>
-                  <p className="about-wrapper__info-text-grid-item" />
+                  <p className="about-wrapper__info-text-grid-item">&nbsp;</p>
                   <p className="about-wrapper__info-text-grid-item">
                     {career2 || 'The data does not exist.'}
                   </p>
+                </p>
+                <p className="about-wrapper__info-text-grid">
                   <p className="about-wrapper__info-text-grid-item">{titleActivity}</p>
                   <p className="about-wrapper__info-text-grid-item">
                     {activity1 || 'The data does not exist.'}
                   </p>
-                  <p className="about-wrapper__info-text-grid-item" />
+                  <p className="about-wrapper__info-text-grid-item">&nbsp;</p>
                   <p className="about-wrapper__info-text-grid-item">
                     {activity2 || 'The data does not exist.'}
                   </p>
-                  <p className="about-wrapper__info-text-grid-item" />
+                  <p className="about-wrapper__info-text-grid-item">&nbsp;</p>
                   <p className="about-wrapper__info-text-grid-item">
                     {activity3 || 'The data does not exist.'}
                   </p>
-                  <p className="about-wrapper__info-text-grid-item" />
+                  <p className="about-wrapper__info-text-grid-item">&nbsp;</p>
                   <p className="about-wrapper__info-text-grid-item">
                     {activity4 || 'The data does not exist.'}
                   </p>

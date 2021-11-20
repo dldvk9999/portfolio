@@ -22,7 +22,7 @@
     "bootstrap": "^4.5.0",
     "carousel": "0.0.3",
     "create-react-app": "^4.0.3",
-    "gatsby": "^2.23.7",
+    "gatsby": "^2.32.13",
     "gatsby-image": "^2.4.7",
     "gatsby-image-background-slider": "0.0.4",
     "gatsby-plugin-manifest": "^2.4.12",

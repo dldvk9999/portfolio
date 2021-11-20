@@ -2,7 +2,8 @@ import React from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import PropTypes from 'prop-types';
-import { nanoid } from 'nanoid';
+import { StaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 const App = ({ img1, img2, img3, img4, img5, img6, img7, img8 }) => {
   const images = [img1, img2, img3, img4, img5, img6, img7, img8];
@@ -20,43 +21,48 @@ const App = ({ img1, img2, img3, img4, img5, img6, img7, img8 }) => {
   return (
     <div className="App">
       <div>
-        <AliceCarousel autoPlayInterval="4000" infinite autoPlay keyboardNavigation>
+        <AliceCarousel autoPlayInterval="4000" infinite keyboardNavigation>
           {images2.map((img) => {
-            const name = img.split('/');
-            if (
-              name[0] === 'peacekeeper' ||
-              (name[0] === 'hanium' && name[1] === 'slide_6.jpg') ||
-              (name[0] === 'hanium' && name[1] === 'slide_7.jpg') ||
-              (name[0] === 'hanium' && name[1] === 'slide_8.gif')
-            ) {
-              return (
-                <img
-                  src={img}
-                  className="sliderimg"
-                  alt=""
-                  style={{ width: 'inherit', maxWidth: '30%', height: 'auto' }}
-                  key={nanoid}
-                />
-              );
-            }
-            if (name[0] === 'kshield' && name[1] === 'slide_1.png') {
-              return (
-                <img
-                  src={img}
-                  className="sliderimg"
-                  alt=""
-                  style={{ width: 'inherit', maxWidth: '70%', height: 'auto' }}
-                  key={nanoid}
-                />
-              );
-            }
             return (
-              <img
-                src={img}
-                className="sliderimg"
-                alt=""
-                style={{ width: 'inherit', height: 'auto' }}
-                key={nanoid}
+              <StaticQuery
+                query={graphql`
+                  query {
+                    images: allFile {
+                      edges {
+                        node {
+                          relativePath
+                          name
+                          childImageSharp {
+                            fluid(maxWidth: 400, quality: 100) {
+                              ...GatsbyImageSharpFluid
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                `}
+                render={(data) => {
+                  const image = data.images.edges.find((n) => n.node.relativePath.includes(img));
+
+                  if (!image) return null;
+
+                  let imageFixed = null;
+                  try {
+                    imageFixed = image.node.childImageSharp.fluid;
+                  } catch {
+                    imageFixed = null;
+                  }
+                  return (
+                    <Img
+                      style={{ maxWidth: '73.2rem', maxHeight: '30rem' }}
+                      imgStyle={{ objectFit: 'contain' }}
+                      className="sliderimg"
+                      alt=""
+                      fluid={imageFixed}
+                    />
+                  );
+                }}
               />
             );
           })}

@@ -136,7 +136,6 @@ export const certificatesData = [
 export const projectsData = [
   {
     id: nanoid(),
-    img: 'hanium/slide_5.png',
     img1: 'hanium/slide_1.PNG',
     img2: 'hanium/slide_2.PNG',
     img3: 'hanium/slide_3.PNG',
@@ -144,7 +143,6 @@ export const projectsData = [
     img5: 'hanium/slide_5.png',
     img6: 'hanium/slide_6.jpg',
     img7: 'hanium/slide_7.jpg',
-    img8: 'hanium/slide_8.gif',
     title: '2020 한이음 프로젝트',
     info: 'Device Driver를 활용한 랩톱 보안 소프트웨어',
     info2:
@@ -166,7 +164,6 @@ export const projectsData = [
   },
   {
     id: nanoid(),
-    img: 'peacekeeper/slide_4.png',
     img1: 'peacekeeper/slide_1.jpg',
     img2: 'peacekeeper/slide_2.png',
     img3: 'peacekeeper/slide_3.png',
@@ -192,7 +189,6 @@ export const projectsData = [
   },
   {
     id: nanoid(),
-    img: 'kshield/slide_1.png',
     img1: 'kshield/slide_1.png',
     img2: 'kshield/slide_2.png',
     img3: 'kshield/slide_3.png',
@@ -219,7 +215,6 @@ export const projectsData = [
   },
   {
     id: nanoid(),
-    img: 'site/slide_1.PNG',
     img1: 'site/slide_1.PNG',
     img2: 'site/slide_2.png',
     img3: 'site/slide_3.png',
