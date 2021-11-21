@@ -39,7 +39,7 @@ export const aboutData = {
   email: 'dldvk9999@naver.com',
   blog: 'https://blog.naver.com/dldvk9999',
   tistory: 'https://dldvk9999.tistory.com/',
-  resume: 'https://drive.google.com/file/d/18wKPBan87mdvGA7amkk1DeYsCg8kbvNI/view?usp=sharing',
+  resume: 'https://drive.google.com/file/d/1ZsMqiI43BbT1aase8JK8TK6NLLJK5-Z7/view?usp=sharing',
 };
 
 // CERTIFICATES DATA
