@@ -3,6 +3,10 @@
   color: $dark-blue-text;
   margin-top: -15rem;
   padding-top: 15rem;
+  
+  .alice-carousel__next-btn-wrapper {
+    text-align: left;
+  }
 
   @include respond(tab-land) {
     margin-top: 0;
