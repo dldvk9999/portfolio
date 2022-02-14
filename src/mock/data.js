@@ -19,7 +19,7 @@ export const heroData = {
   title: '제 이름은 ',
   name: '박종근',
   title2: ' 입니다.',
-  subtitle: '좋았다면 추억이고 나빴다면 경험으로 삼는 개발자,',
+  subtitle: '좋았다면 추억이고 나빴다면 경험으로 삼는,',
   cta: '시작하기',
 };
 
