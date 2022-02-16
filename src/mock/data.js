@@ -28,7 +28,7 @@ export const aboutData = {
   img: 'profile.jpg',
   name: '박종근',
   birth: '1998년 1월 5일',
-  degree: '수원대학교 정보보호학과 졸업 예정',
+  degree: '수원대학교 정보보호학과 졸업',
   career1: '18.05.21~20.01.15 육군본부(계룡대 근무지원단) 정보보호병 만기 전역',
   career2: '21.02.15~21.12.31 홈페이지 개발 창업',
   activity1: '20.05.13~20.11.30 한이음 ICT 멘토링 프로젝트 수행',
@@ -39,7 +39,7 @@ export const aboutData = {
   email: 'dldvk9999@naver.com',
   blog: 'https://blog.naver.com/dldvk9999',
   tistory: 'https://dldvk9999.tistory.com/',
-  resume: 'https://drive.google.com/file/d/1ZsMqiI43BbT1aase8JK8TK6NLLJK5-Z7/view?usp=sharing',
+  resume: 'https://drive.google.com/file/d/16kra_mI429vdvqnNYF4yNTmNttY9YTR6/view?usp=sharing',
 };
 
 // CERTIFICATES DATA
@@ -55,7 +55,7 @@ export const certificatesData = [
     info4:
       '보통 관제 업무를 진행하였으며, 주/야간 2교대 근무로 한달 평균 약 160시간 정도 근무하였습니다.',
     info5:
-      '이러한 군 생활을 통해 실제 사이버 보안에 있어서 침해사고 발생시 대응하는 전략, 보안 강화의 흐름, 초기대응의 중요성, 보안 장비 숙련, 관제 간 신 취약점 발견 및 대응 등 보안 업무에 있어 핵심 업무들을 많이 배울 수 있었고 보안에 흥미를 더 돋굴 수 있는 계기가 되었습니다.',
+      '이러한 군 생활을 통해 실제 사이버 보안에 있어서 침해사고 발생시 대응하는 전략, 보안 강화의 흐름, 초기대응의 중요성, 보안 장비 숙련, 관제 간 취약점 발견 및 대응 등 보안 업무에 있어 핵심 업무들을 많이 배울 수 있었고 보안에 흥미를 더 돋굴 수 있는 계기가 되었습니다.',
     url: '',
   },
   {
@@ -112,7 +112,7 @@ export const certificatesData = [
     info4:
       '처음 사업자등록을 할때는 아무것도 모르고 시작했기 때문에 너무나도 힘이 들었지만 남들 몇년에 걸쳐 배우는 것을 저는 단 몇개월만에 배웠기때문에 더 많이 경험하고 빠르게 성장할 수 있었던 것 같습니다.',
     info5:
-      'PM직을 통해 프로젝트의 매니저는 어떤식으로 행동해야할지 사업장을 차린 대표로써 어떤 마음을 가지는지 실제로 겪어보았기 때문에 입사한다면 매우 큰 도움이 될 것으로 생각합니다.',
+      'PM직을 통해 프로젝트의 매니저는 어떤식으로 행동해야할지 어떤 마음을 가지는지 실제로 겪어보았기 때문에 입사한다면 매우 큰 도움이 될 것으로 생각합니다.',
     url: '',
   },
   {
